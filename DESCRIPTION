@@ -4,8 +4,7 @@ Title: Plots daily time series of regional Alaska sea surface temperatures
 Version: 0.1.0
 Author: Jordan Watson
 Maintainer: Jordan Watson <jordan.watson@noaa.gov>
-  Description: Average sea surface temperatures by day are plotted within predefined Alaska regions. More info about regional binning at https://psesv.psmfc.org/PSESV3.html.
-License: Software code created by U.S. Government employees is not subject to copyright in the United States. The United States/Department of Commerce reserve all rights to seek and obtain copyright protection in countries other than the United States for Software authored in its entirety by the Department of Commerce. To this end, the Department of Commerce hereby grants to Recipient a royalty-free, nonexclusive license to use, copy, and create derivative works of the Software outside of the United States.
+Description: Average sea surface temperatures by day are plotted within predefined Alaska regions. More info about regional binning at https://psesv.psmfc.org/PSESV3.html.
+License: Software code created by U.S. Government employees is not subject to copyright in the United States. The United States/Department of Commerce reserve all rights to seek and obtain copyright protection in countries other than the United States for Software authored in its entirety by the Department of Commerce. To this end, the Department of Commerce hereby grants to Recipient a royalty-free, nonexclusive license to use, copy, and create derivative works of the Software outside of the United States
 Encoding: UTF-8
 LazyData: true
-Depends: dplyr,ggplot2,lubridate,forcats,cowplot,magick,httr

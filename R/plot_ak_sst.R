@@ -68,7 +68,7 @@ plot_ak_sst <- function(region1,region2){
           plot.margin=unit(c(0.65,0,0.65,0),"cm"))
 
   ggdraw(mylines_base) +
-    draw_image("fisheries_header_logo_jul2019.png",scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
+    draw_image("Data/fisheries_header_logo_jul2019.png",scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
     #annotate("text",x=0.115,y=0.085,label=paste0("Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (data: JPL MUR SST, ",format(Sys.Date(),"%m-%d-%Y"),")"),
     #         hjust=0.1,size=2.59,family="sans",fontface=2,color=OceansBlue2)
     annotate("text",x=0.11,y=0.072,label=paste0("Data: JPL MUR SST, courtesy of NOAA Southwest Fisheries and CoastWatch West Coast; coastwatch.pfeg.noaa.gov/erddap\n           Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (Updated: ",format(Sys.Date(),"%m-%d-%Y"),")"),
@@ -80,9 +80,9 @@ plot_ak_sst <- function(region1,region2){
 #dev.off()
 #myplotfun("EGOA","WGOA")
 
-jpeg(paste0("figure_output/SST_Bering_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".jpeg"),width=6,height=4,units="in",quality=100,res=300)
-myplotfun("NBS","EBS")
-dev.off()
+#jpeg(paste0("figure_output/SST_Bering_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".jpeg"),width=6,height=4,units="in",quality=100,res=300)
+#myplotfun("NBS","EBS")
+#dev.off()
 
 #jpeg(paste0("figure_output/SST_GOA_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".jpeg"),width=6,height=4,units="in",quality=100,res=300)
 #myplotfun("EGOA","WGOA")
