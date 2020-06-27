@@ -1,6 +1,6 @@
 update_sst_data <- function(){
 
-  print("Package aksst is querying the latest sea surface temperature data. This may take 10-20 seconds depending on your internet speed.")
+  print("Downloading sea surface temperature data from AKFIN. This may take 10-20 seconds depending on your internet speed.")
 
   #  Query data from public web API
   httr::content(httr::GET('https://apex.psmfc.org/akfin/data_marts/akmp/GET_TIME_SERIES_REGIONAL_AVG_TEMPS'), type = "text/csv") %>%
