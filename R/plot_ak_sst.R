@@ -66,11 +66,14 @@ plot_ak_sst <- function(region1,region2){
           legend.key.size = unit(0.35,"cm"),
           plot.margin=unit(c(0.65,0,0.65,0),"cm"))
 
-  png(paste0("SST_",region1,"_",region2,format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
-  ggdraw(mylines_base) +
+  myfigure <- ggdraw(mylines_base) +
     draw_image("Data/fisheries_header_logo_jul2019.png",scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
     annotate("text",x=0.11,y=0.072,label=paste0("Data: JPL MUR SST, courtesy of NOAA Southwest Fisheries and CoastWatch West Coast; coastwatch.pfeg.noaa.gov/erddap\n           Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (Updated: ",format(Sys.Date(),"%m-%d-%Y"),")"),
              hjust=0.1,size=2.57,family="sans",fontface=2,color=OceansBlue2)
+
+
+  png(paste0("SST_",region1,"_",region2,"_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
+  myfigure
   dev.off()
 
   print(paste0("SST image was saved as a .png file in your working directory ",getwd()))
