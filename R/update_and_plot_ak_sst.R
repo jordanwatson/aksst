@@ -103,7 +103,6 @@ update_and_plot_ak_sst <- function(region1,region2){
 #myplotfun("NBS","EBS")
 #dev.off()
 #myplotfun("EGOA","WGOA")
-dev.new(width=6,height=3.375,units="in")
 
 #jpeg(paste0("figure_output/SST_Bering_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".jpeg"),width=6,height=4,units="in",quality=100,res=300)
 #myplotfun("NBS","EBS")

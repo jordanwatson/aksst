@@ -61,7 +61,6 @@ plot_ak_sst <- function(region1,region2){
           strip.text = element_text(size=10,color="white",family="sans",face="bold"),
           strip.background = element_rect(fill=OceansBlue2),
           axis.title = element_text(size=10,family="sans"),
-          axis.text = element_text(size=10,family="sans"),
           panel.border=element_rect(colour="black",size=0.75),
           axis.text.x=element_text(color=c("black",NA,NA,"black",NA,NA,"black",NA,NA,"black",NA,NA,NA)),
           legend.key.size = unit(0.35,"cm"),
