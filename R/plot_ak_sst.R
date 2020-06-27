@@ -74,8 +74,14 @@ plot_ak_sst <- function(region1,region2){
 
 
   png(paste0("SST_",region1,"_",region2,"_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
-  myfigure
+  print(myfigure)
   dev.off()
+
+  #myfigure
+  #p <- plot(rnorm(1:10))
+  #ggsave(paste0("SST_",region1,"_",region2,"_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
+  #ggsave(paste0("SST_test_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",dpi=300,p)
+  #dev.off()
 
   print(paste0("SST image was saved as a .png file in your working directory ",getwd()))
 }
