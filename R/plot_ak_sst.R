@@ -32,7 +32,7 @@ plot_ak_sst <- function(region1,region2){
   mean.years <- 2003:2012
   mean.lab <- "Mean 2003-2012"
 
-    mylines_base <- ggplot() +
+  mylines_base <- ggplot() +
     geom_line(data=data %>% filter(year2<last.year & esr_region%in%(c(region1,region2))),
               aes(newdate,meansst,group=factor(year2),col='mygrey'),size=0.3) +
     geom_line(data=data %>% filter(year2==last.year & esr_region%in%(c(region1,region2))),
@@ -67,19 +67,15 @@ plot_ak_sst <- function(region1,region2){
           legend.key.size = unit(0.35,"cm"),
           plot.margin=unit(c(0.65,0,0.65,0),"cm"))
 
+  png(paste0("SST_",region1,"_",region2,format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
   ggdraw(mylines_base) +
     draw_image("Data/fisheries_header_logo_jul2019.png",scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
-    #annotate("text",x=0.115,y=0.085,label=paste0("Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (data: JPL MUR SST, ",format(Sys.Date(),"%m-%d-%Y"),")"),
-    #         hjust=0.1,size=2.59,family="sans",fontface=2,color=OceansBlue2)
     annotate("text",x=0.11,y=0.072,label=paste0("Data: JPL MUR SST, courtesy of NOAA Southwest Fisheries and CoastWatch West Coast; coastwatch.pfeg.noaa.gov/erddap\n           Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (Updated: ",format(Sys.Date(),"%m-%d-%Y"),")"),
              hjust=0.1,size=2.57,family="sans",fontface=2,color=OceansBlue2)
-
-  png(paste0("SST_",region1,"_",region2,format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
-  myplotfun("NBS","EBS")
   dev.off()
 
   print(paste0("SST image was saved as a .png file in your working directory ",getwd()))
-  }
+}
 
 #png(paste0("figure_output/SST_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
 #myplotfun("NBS","EBS")
