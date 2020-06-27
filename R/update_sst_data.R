@@ -1,7 +1,9 @@
 update_sst_data <- function(){
 
+  print("Package aksst is querying the latest sea surface temperature data. This may take 10-20 seconds depending on your internet speed.")
+
   #  Query data from public web API
-  data <- httr::content(httr::GET('https://apex.psmfc.org/akfin/data_marts/akmp/GET_TIME_SERIES_REGIONAL_AVG_TEMPS'), type = "text/csv") %>%
+  httr::content(httr::GET('https://apex.psmfc.org/akfin/data_marts/akmp/GET_TIME_SERIES_REGIONAL_AVG_TEMPS'), type = "text/csv") %>%
     rename_all(tolower) %>%
     mutate(read_date=as.Date(read_date,format="%m/%d/%Y"),
            julian=as.numeric(julian),
@@ -23,5 +25,5 @@ update_sst_data <- function(){
   #mutate(meansst3=rollmean(meansst,k=3,fill=NA), # 3-day rolling average of SST
   #       meansst5=rollmean(meansst,k=5,fill=NA), # 5-day rolling average of SST
   #       meansst7=rollmean(meansst,k=7,fill=NA)) # 7-day rolling average of SST
-
+#return(data)
 }
