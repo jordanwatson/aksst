@@ -73,7 +73,13 @@ plot_ak_sst <- function(region1,region2){
     #         hjust=0.1,size=2.59,family="sans",fontface=2,color=OceansBlue2)
     annotate("text",x=0.11,y=0.072,label=paste0("Data: JPL MUR SST, courtesy of NOAA Southwest Fisheries and CoastWatch West Coast; coastwatch.pfeg.noaa.gov/erddap\n           Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (Updated: ",format(Sys.Date(),"%m-%d-%Y"),")"),
              hjust=0.1,size=2.57,family="sans",fontface=2,color=OceansBlue2)
-}
+
+  png(paste0("SST_",region1,"_",region2,format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
+  myplotfun("NBS","EBS")
+  dev.off()
+
+  print(paste0("SST image was saved as a .png file in your working directory ",getwd()))
+  }
 
 #png(paste0("figure_output/SST_Twitter_",format(Sys.Date(),"%Y_%m_%d"),".png"),width=6,height=3.375,units="in",res=300)
 #myplotfun("NBS","EBS")
