@@ -56,7 +56,8 @@ plot_ak_sst <- function(region1,region2){
                  expand = c(0.025,0.025)) +
     theme(legend.position=c(mylegx,mylegy),
           legend.text = element_text(size=8,family="sans"),
-          legend.background = element_rect(fill="white"),
+          #legend.background = element_rect(fill="white"),
+          legend.background = element_blank(),
           legend.title = element_blank(),
           strip.text = element_text(size=10,color="white",family="sans",face="bold"),
           strip.background = element_rect(fill=OceansBlue2),
