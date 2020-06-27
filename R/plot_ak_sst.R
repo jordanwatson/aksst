@@ -68,7 +68,7 @@ plot_ak_sst <- function(region1,region2){
 
   myfigure <- ggdraw(mylines_base) +
     #draw_image(paste0(.libPaths(),"/aksst/Data/fisheries_header_logo_jul2019.png"),scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
-    draw_image(system.file("Data/fisheries_header_logo_jul2019.png",package="aksst"),scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
+    draw_image(system.file("data/fisheries_header_logo_jul2019.png",package="aksst"),scale=0.2,x=mylogox,y=mylogoy,hjust=0.35) +
     annotate("text",x=0.11,y=0.072,label=paste0("Data: JPL MUR SST, courtesy of NOAA Southwest Fisheries and CoastWatch West Coast; coastwatch.pfeg.noaa.gov/erddap\n           Contact: Jordan.Watson@noaa.gov, Alaska Fisheries Science Center, NOAA Fisheries (Updated: ",format(Sys.Date(),"%m-%d-%Y"),")"),
              hjust=0.1,size=2.57,family="sans",fontface=2,color=OceansBlue2)
 
