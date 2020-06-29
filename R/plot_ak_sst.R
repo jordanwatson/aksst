@@ -1,5 +1,5 @@
 #  Create plotting function that will allow selection of 2 ESR regions
-plot_ak_sst <- function(region1,region2){
+plot_ak_sst <- function(data=sstdata,region1,region2){
 
   #  Load 508 compliant NOAA colors
   OceansBlue1='#0093D0'
