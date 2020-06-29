@@ -30,8 +30,9 @@ There are four regions that can be easily examined, "EBS", "NBS", "EGOA", "WGOA"
 A single function will output a formatted png file to the working directory, with the NOAA logo and some metadata at the bottom.
 
 Assuming you read in the data above, you could generate images with the following:
+
 ```
-# You must first make sure you 
+#  Using the sstdata object created above, plot the data
 plot_ak_sst(sstdata,"EBS","NBS")
 plot_ak_sst(sstdata,"EGOA","WGOA")
 ```
@@ -39,8 +40,8 @@ plot_ak_sst(sstdata,"EGOA","WGOA")
 To plot a generic version to your R console, you can use the generic plotting function that omits the NOAA logo and metadata.
 
 ```
-plot_ak_sst_generic("EBS","NBS")
-plot_ak_sst_generic("WGOA","WGOA")
+plot_ak_sst_generic(sstdata,"EBS","NBS")
+plot_ak_sst_generic(sstdata,"WGOA","WGOA")
 ```
 If you knew you just wanted to plot a single image, then there's no need to save the data as a separate object and you could just use the integrated update and plot function in a single step. 
 
