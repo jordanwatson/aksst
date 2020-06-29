@@ -28,6 +28,7 @@ There are four regions that can be easily examined, "EBS", "NBS", "EGOA", "WGOA"
 
 A single function will output a formatted jpg file to the working directory, whith the NOAA logo and some metadata at the bottom.
 ```
+# You must first make sure you 
 plot_ak_sst("EBS","NBS")
 ```
 
