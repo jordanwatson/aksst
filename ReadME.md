@@ -3,15 +3,12 @@
 Author: Jordan Watson (jordan.watson@noaa.gov)
 
 
-This package uses the JPL MUR SST dataset to plot regional Alaska sea surface temperatures. 
+This package uses the JPL MUR SST dataset to plot regional Alaska sea surface temperatures in a format that looks like the following image.
 
 ![sst image](/images/SST_Twitter_image.png)
-Format: ![Alt Text](url)
 
 
-
-
-The data are downloaded daily through the CoastWatch West Coast Node ERDDAP, and ingested at AKFIN, the Alaska Fisheries Information Network. For each day, approximately 10 million temperature records are aggregated into the Alaska Department of Fish and Game statistical management areas. Within each of these areas and on each day, the data are averaged to yield 1,758 daily average SST records. These data are then binned into regional spatial strata as described by the NOAA Alaska Fisheries Science Center Ecosystem Status Consideration spatial strata, "Eastern Bering Sea (EBS)", "Northern Bering Sea (NBS)", "Western Gulf of Alaska (WGOA)", and the "Eastern Gulf of Alaska (EGOA)". These daily regional SST values are available via a public webAPI at AKFIN. The key step to this R package is to query this daily time series from AKFIN using this API key, and this is what is downloaded when using the `update_sst_data()` function.
+The data are downloaded daily through the NOAA CoastWatch West Coast Node ERDDAP, and ingested at AKFIN, the Alaska Fisheries Information Network. For each day, approximately 10 million temperature records are aggregated into the Alaska Department of Fish and Game statistical management areas. Within each of these areas and on each day, the data are averaged to yield 1,758 daily average SST records (one sst record per stat area). These data are then binned into regional spatial strata as described by the NOAA Alaska Fisheries Science Center Ecosystem Status Consideration spatial strata, "Eastern Bering Sea (EBS)", "Northern Bering Sea (NBS)", "Western Gulf of Alaska (WGOA)", and the "Eastern Gulf of Alaska (EGOA)". These daily regional SST values are available via a public webAPI at AKFIN. The key step to this R package is to query this daily time series from AKFIN using this API key, and this is what is downloaded when using the `update_sst_data()` function.
 
 
 The aksst package can be installed for R from github.
@@ -45,4 +42,6 @@ plot_ak_sst_generic("EBS","NBS")
 For more information on the spatial strata, see descriptions in the Bering Sea and Gulf of Alaska Ecosystem Status Reports (keyword search for Watson).
 https://access.afsc.noaa.gov/REFM/REEM/ecoweb/
 
-For more information about methods
+For more information about methods, see:
+A contribution in the Pacific States e-Journal for Scientific Visualizations.
+https://psesv.psmfc.org/PSESV3.html
