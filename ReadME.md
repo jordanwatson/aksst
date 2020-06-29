@@ -3,7 +3,15 @@
 Author: Jordan Watson (jordan.watson@noaa.gov)
 
 
-This package uses the JPL MUR SST dataset to plot regional Alaska sea surface temperatures. The data are downloaded daily through the CoastWatch West Coast Node ERDDAP, and ingested at AKFIN, the Alaska Fisheries Information Network. For each day, approximately 10 million temperature records are aggregated into the Alaska Department of Fish and Game statistical management areas. Within each of these areas and on each day, the data are averaged to yield 1,758 daily average SST records. These data are then binned into regional spatial strata as described by the NOAA Alaska Fisheries Science Center Ecosystem Status Consideration spatial strata, "Eastern Bering Sea (EBS)", "Northern Bering Sea (NBS)", "Western Gulf of Alaska (WGOA)", and the "Eastern Gulf of Alaska (EGOA)". These daily regional SST values are available via a public webAPI at AKFIN. The key step to this R package is to query this daily time series from AKFIN using this API key, and this is what is downloaded when using the `update_sst_data()` function.
+This package uses the JPL MUR SST dataset to plot regional Alaska sea surface temperatures. 
+
+![sst image](/images/SST_Twitter_image.png)
+Format: ![Alt Text](url)
+
+
+
+
+The data are downloaded daily through the CoastWatch West Coast Node ERDDAP, and ingested at AKFIN, the Alaska Fisheries Information Network. For each day, approximately 10 million temperature records are aggregated into the Alaska Department of Fish and Game statistical management areas. Within each of these areas and on each day, the data are averaged to yield 1,758 daily average SST records. These data are then binned into regional spatial strata as described by the NOAA Alaska Fisheries Science Center Ecosystem Status Consideration spatial strata, "Eastern Bering Sea (EBS)", "Northern Bering Sea (NBS)", "Western Gulf of Alaska (WGOA)", and the "Eastern Gulf of Alaska (EGOA)". These daily regional SST values are available via a public webAPI at AKFIN. The key step to this R package is to query this daily time series from AKFIN using this API key, and this is what is downloaded when using the `update_sst_data()` function.
 
 
 The aksst package can be installed for R from github.
