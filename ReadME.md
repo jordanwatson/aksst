@@ -1,9 +1,9 @@
 
 
-Author: Jordan Watson (jordan.watson@noaa.gov)
+Author: Jordan Watson (jordan.watson@noaa.gov) and Matt Callahan (mcallahan@psmfc.org)
 
 
-This package uses the [JPL MUR SST dataset](https://podaac.jpl.nasa.gov/dataset/MUR-JPL-L4-GLOB-v4.1) to plot regional Alaska sea surface temperatures in a format that looks like the following image.
+Apologies for the temporary disruption in service - the web API is being replaced with a newer and more functional version. The data are also being transitioned to a longer time series (from MUR SST to Coral Reef Watch SST). We're also working on integrating some marine heatwave functionality. It'll be worth it! You can see some interim developments with the new web API here (https://github.com/jordanwatson/AKFIN_WebService)
 
 ![sst image](/images/SST_Twitter_image.png)
 
