@@ -3,7 +3,7 @@
 Author: Jordan Watson (jordan.watson@noaa.gov) and Matt Callahan (mcallahan@psmfc.org)
 
 
-Apologies for the temporary disruption in service - the web API is being replaced with a newer and more functional version. The data are also being transitioned to a longer time series (from MUR SST to Coral Reef Watch SST). We're also working on integrating some marine heatwave functionality. It'll be worth it! You can see some interim developments with the new web API here (https://github.com/jordanwatson/AKFIN_WebService)
+Apologies for the temporary disruption in service - the web API is being replaced with a newer and more functional version. The data are also being transitioned to a longer time series (from MUR SST to Coral Reef Watch SST). We're also working on integrating some marine heatwave functionality. It'll be worth it! You can see some interim developments with the new web API here (https://github.com/jordanwatson/AKFIN_WebService). Meanwhile, updated SST and marine heatwave plots can be generated here: https://mattcallahan.shinyapps.io/NBS_SEBS_SST_MHW/
 
 ![sst image](/images/SST_Twitter_image.png)
 
